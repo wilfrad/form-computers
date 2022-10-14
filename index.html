@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño web</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/resource/icon/icon-car-blue-logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resource/icon/icon-car-blue-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resource/icon/icon-car-blue-logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/lib/bootstrap-5.2.0-dist/css/bootstrap.css">
+</head>
+<body class="--backgroung-gradient-blue">
+    <header>
+        <nav class="bg-light pt-3">
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link disabled" id="nav-btn-home" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" id="nav-btn-form" aria-current="page" href="#">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="nav-btn-table" href="#">Tabla</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="container-table card mt-5 p-3" id="table-main" >
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Id</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="4">empanadas</th>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry</td>
+                    <td>@twitter</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">4</th>
+                    <td>wilfrad</td>
+                    <td colspan="2">panasea</td>
+                  </tr>
+                  <tr class="table-info">
+                    <th scope="row">Total registros</th>
+                    <td colspan="4">
+                        <p class="text-end">4</p>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <form class="container-from card w-75 mt-5 position-absolute top-50 start-50 translate-middle" id="form-main" hidden>
+            <div class="card-header" >
+                computador
+            </div>
+    
+            <div class="card-body p-3">
+                <label for="serial-input" class="form-label text-start">serial:</label>
+                <input type="text" class="form-control" id="serial-input" name="serial-input" required><br>
+    
+                <label for="brand-input" class="form-label text-start" >marca:</label>
+                <input type="text" class="form-control"  id="brand-input" name="brand-input" required><br>
+    
+                <label for="hdd-input" class="form-label text-start" >capacidad del HDD:</label>
+                <input type="number" class="form-control" id="hdd-input" name="hdd-input" required><br>
+    
+                <label for="select-device" class="form-label text-start" >seleccione tipo:</label>
+                <select name="select-device" class="form-select" id="select-device">
+                    <option value=""></option>
+                    <option value="portatil">portatil</option>
+                    <option value="desk">escritorio</option>
+                </select><br>
+    
+                <div class="portatil-quest" >
+                    <label for="size" class="form-label text-start" >tamaño(cm):</label>
+                    <input type="number" class="form-control"  id="size" name="size"><br>
+    
+                    <label for="power" class="form-label text-start" >tiene cargador:</label>
+                    <input type="checkbox" class="form-check-label" id="power" name="power">
+                    <label for="powert" class="form-label text-start" ></label><br>
+    
+                    <label for="class="table-success"" class="form-label text-start" >tiene teclado:</label>
+                    <input type="checkbox" class="form-check-label" id="keyboard" name="keyboard">
+                    <label for="keyboardt" class="form-label text-start" ></label><br>
+                </div><br>
+                
+                <div class="desk-quest" >
+                    <label for="power-capacity" class="form-label text-start" >capacidad fuente:</label>
+                    <input type="text" class="form-control"  id="power-capacity" name="power-capacity"><br>
+    
+                    <label for="display" class="form-label text-start" >tiene pantalla:</label>
+                    <input type="checkbox" class="form-check-label" id="display" name="display">
+                    <label for="displayt" class="form-label" ></label><br>
+                </div><br>
+    
+                <input type="submit" class="btn btn-primary" id="check" value="Enviar">
+                <button class="btn btn-secondary disabled p-2" role="button" aria-disabled="true">Limpiar</button>
+            </div>
+        </form>
+    </main>
+    <script src="/app.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap-5.2.0-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/lib/popper/popper.js"></script>
+</body>
+</html>
