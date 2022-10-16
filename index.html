@@ -58,7 +58,7 @@
             </table>
         </div>
         
-        <form class="container-from card w-75 mt-5 position-absolute top-50 start-50 translate-middle" id="form-main" hidden>
+        <form class="container-from card w-75 mt-4 position-absolute top-50 start-50 translate-middle" id="form-main">
             <div class="card-header" >
                 Add new device
             </div>
@@ -69,71 +69,73 @@
                 </div>
 
                 <div class="col-8 p-2">
-                    <div class="general-quest">
-                        <label for="brand-input" class="form-label text-start" >Brand :</label>
-                        <input type="text" class="form-control"  id="brand-input" name="brand-input" required><br>
-            
-                        <label for="storage-input" class="form-label text-start" >Memory storage :</label>
-                        <input type="number" class="form-control" id="storage-input" name="hdd-input" required><br>
-            
-                        <label for="select-device" class="form-label text-start" >Device format :</label>
-                        <select name="select-device" class="form-select" id="select-device">
-                            <option selected value="">Select a type</option>
-                            <option value="portatil">Laptop</option>
-                            <option value="desk">Desk</option>
-                        </select><br>
-                    </div>
-        
-                    <div class="portatil-quest" hidden>
-                        <label for="size" class="form-label text-start">Size (cm) :</label>
-                        <input type="text" class="form-control"  id="size" name="size" placeholder="12 x 22.5 x 1.2"><br>
-        
-                        <label for="changer" class="form-label text-start" >Changer :</label>
-                        <input type="checkbox" class="form-check-label" id="changer" name="changer"><br>
-        
-                        <label for="keyboard" class="form-label text-start" >keyboard :</label>
-                        <input type="checkbox" class="form-check-label" id="keyboard" name="keyboard"><br>
-                    </div>
+                    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active general-quest">
+                                <label for="brand-input" class="form-label text-start" >Brand :</label>
+                                <input type="text" class="form-control"  id="brand-input" name="brand-input" required><br>
                     
-                    <div class="desk-quest" hidden>
-                        <label for="power-capacity" class="form-label text-start" >Power supply capacity :</label>
-                        <input type="text" class="form-control"  id="power-capacity" name="power-capacity"><br>
+                                <label for="storage-input" class="form-label text-start" >Memory storage :</label>
+                                <input type="number" class="form-control" id="storage-input" name="hdd-input" required><br>
+                    
+                                <label for="select-device" class="form-label text-start" >Device format :</label>
+                                <select name="select-device" class="form-select" id="select-device">
+                                    <option selected value="">Select a type</option>
+                                    <option value="portatil">Laptop</option>
+                                    <option value="desk">Desk</option>
+                                </select><br>
+                            </div>
+                
+                            <div class="carousel-item portatil-quest">
+                                <label for="size" class="form-label text-start">Size (cm) :</label>
+                                <input type="text" class="form-control"  id="size" name="size" placeholder="12 x 22.5 x 1.2"><br>
+                
+                                <label for="changer" class="form-label text-start" >Changer :</label>
+                                <input type="checkbox" class="form-check-label" id="changer" name="changer"><br>
+                
+                                <label for="keyboard" class="form-label text-start" >keyboard :</label>
+                                <input type="checkbox" class="form-check-label" id="keyboard" name="keyboard"><br>
+                            </div>
+                            
+                            <div class="carousel-item desk-quest">
+                                <label for="power-capacity" class="form-label text-start" >Power supply capacity :</label>
+                                <input type="text" class="form-control"  id="power-capacity" name="power-capacity"><br>
+                
+                                <label for="display" class="form-label text-start" >Display</label>
+                                <input type="checkbox" class="form-check-label" id="display" name="display"><br>
+                            </div>
         
-                        <label for="display" class="form-label text-start" >Display</label>
-                        <input type="checkbox" class="form-check-label" id="display" name="display"><br>
-                    </div>
-
-                    <div class="additional-quest" hidden>
-                        <label for="img-input" class="form-label text-start" >Image :</label>
-                        <input type="file" class="form-control" id="img-input" name="img-input" accept=".png,.jpg,.svg"><br>
-            
-                        <label for="description-input" class="form-label text-start" >Description :</label>
-                        <textarea class="form-control" id="description-input" name="description-input" rows="3" cols="30" placeholder="observations and comments"></textarea><br>
+                            <div class="carousel-item additional-quest">
+                                <label for="img-input" class="form-label text-start" >Image :</label>
+                                <input type="file" class="form-control" id="img-input" name="img-input" accept=".png,.jpg,.svg"><br>
+                    
+                                <label for="description-input" class="form-label text-start" >Description :</label>
+                                <textarea class="form-control" id="description-input" name="description-input" rows="3" cols="30" placeholder="observations and comments"></textarea><br>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="form-func d-flex justify-content-end">
-                        <input type="button" class="btn btn-secondary disabled" id="clear-form" value="Back">
-                        <input type="submit" class="btn btn-primary w-25 disabled ms-2" id="send-form" value="Next">
+                        <input type="button" class="btn btn-secondary" id="clear-form" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev" value="Back">
+                        <input type="submit" class="btn btn-primary w-25 ms-2" id="send-form" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" value="Next">
                     </div>
                 </div>
             </div>
         </form>
 
-        <div class="card w-40 py-1 floating-menu">
+        <div class="card r-10 py-1 floating-menu" hidden>
             <h5 class="fm-title text-center mb-1">Element</h5>
-            <img src="resource/img/form-img-laptop.jpg" class="card-img-top" alt="floating-menu-img">
-            <div class="px-1">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <span id="fm-item-name">
-                        <img src="resource/icon/item-32x32.png" alt="floating-menu-img-item">
-                        Item : 
-                    </span>
-                    <span id="fm-item-value">value</span>
-                </li>
+            <img src="resource/img/form-img-laptop.jpg" class="card-img-top align-self-center w-75" alt="floating-menu-img">
+            <div class="list-group-item d-flex justify-content-between align-items-center px-1">
+                <p class="my-0 fw-7" id="fm-item-name">
+                    <img src="resource/icon/item-24x24.png" alt="floating-menu-img-item">
+                    Item : 
+                </p>
+                <p class="my-0 fw-7" id="fm-item-value">value</p>
             </div>
         </div>
     </main>
-    <script src="/app.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
     <script type="text/javascript" src="/lib/bootstrap-5.2.0-dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="/lib/popper/popper.js"></script>
 </body>

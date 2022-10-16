@@ -20,6 +20,10 @@
     position: fixed;
 }
 
-.w-40 {
-    width: 14rem;
+.fw-7{
+    font-size: 14px !important;
+}
+
+.r-10 {
+    width: 10rem;
 }
