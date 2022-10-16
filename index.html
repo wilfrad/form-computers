@@ -59,8 +59,12 @@
         </div>
         
         <form class="container-from card w-75 mt-4 position-absolute top-50 start-50 translate-middle" id="form-main">
-            <div class="card-header" >
-                Add new device
+            <div class="card-header">
+                <span id="main-section-title">Add new device</span>
+                <span id="sub-section" hidden>
+                    <img class="mx-1" src="/resource/icon/sub-section.svg" alt="...">
+                    <span id="sub-section-title">Laptop</span>
+                </span>
             </div>
             
             <div class="row g-0">
@@ -76,7 +80,7 @@
                                 <input type="text" class="form-control"  id="brand-input" name="brand-input" required><br>
                     
                                 <label for="storage-input" class="form-label text-start" >Memory storage :</label>
-                                <input type="number" class="form-control" id="storage-input" name="hdd-input" required><br>
+                                <input type="number" class="form-control" id="storage-input" name="hdd-input" placeholder="GB" required><br>
                     
                                 <label for="select-device" class="form-label text-start" >Device format :</label>
                                 <select name="select-device" class="form-select" id="select-device">
@@ -87,8 +91,8 @@
                             </div>
                 
                             <div class="carousel-item portatil-quest">
-                                <label for="size" class="form-label text-start">Size (cm) :</label>
-                                <input type="text" class="form-control"  id="size" name="size" placeholder="12 x 22.5 x 1.2"><br>
+                                <label for="size" class="form-label text-start">Size :</label>
+                                <input type="text" class="form-control"  id="size" name="size" placeholder="12 x 22.5 x 1.2 cm"><br>
                 
                                 <label for="changer" class="form-label text-start" >Changer :</label>
                                 <input type="checkbox" class="form-check-label" id="changer" name="changer"><br>
@@ -110,7 +114,7 @@
                                 <input type="file" class="form-control" id="img-input" name="img-input" accept=".png,.jpg,.svg"><br>
                     
                                 <label for="description-input" class="form-label text-start" >Description :</label>
-                                <textarea class="form-control" id="description-input" name="description-input" rows="3" cols="30" placeholder="observations and comments"></textarea><br>
+                                <textarea class="form-control size-f" id="description-input" name="description-input" rows="3" cols="30" placeholder="observations and comments"></textarea><br>
                             </div>
                         </div>
                     </div>
@@ -135,7 +139,7 @@
             </div>
         </div>
     </main>
-    <script type="text/javascript" src="/app.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
     <script type="text/javascript" src="/lib/bootstrap-5.2.0-dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="/lib/popper/popper.js"></script>
 </body>

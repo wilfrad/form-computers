@@ -27,3 +27,7 @@
 .r-10 {
     width: 10rem;
 }
+
+.size-f {
+    resize: none;
+}
