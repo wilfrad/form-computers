@@ -1,6 +1,6 @@
 import defaultExport from '/scripts/entitys';
 
-const formManager = {
+var formManager = {
     add () {
         let obj = new computer('lenovo', 512);
     }

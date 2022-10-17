@@ -20,6 +20,12 @@
     position: fixed;
 }
 
+.btn-small {
+    --bs-btn-padding-y: .25rem;
+    --bs-btn-padding-x: .5rem;
+    --bs-btn-font-size: .75rem;
+}
+
 .fw-7{
     font-size: 14px !important;
 }
