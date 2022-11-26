@@ -6,7 +6,7 @@
     grid-row-gap: 0px;
 }
 
-.--backgroung-gradient-blue{
+.--background-gradient-blue{
     height: 100vh;
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(39,9,121,1) 35%, rgba(0,212,255,1) 100%);

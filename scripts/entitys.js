@@ -1,4 +1,4 @@
-class computer {
+class Computer {
     Serial = null;
     Brand = null;
     MemoryStorage = null;
@@ -13,7 +13,7 @@ class computer {
     }
 }
 
-class laptop {
+class Laptop {
     Size =  null;
     Changer = null;
     Keyboard = null;
@@ -25,7 +25,7 @@ class laptop {
     }
 }
 
-class desk {
+class Desk {
     PowerCapacity = null;
     Display = null;
 
